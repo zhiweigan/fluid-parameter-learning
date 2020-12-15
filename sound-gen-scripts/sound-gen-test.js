@@ -38,37 +38,37 @@ client.send([
       __dirname, 
       '..',
       'data', 
-      'podo_long_helm.wav',
+      'podo_long_helm_2.wav',
     ), 0, 4),
 ]);
 
-client.send([
-  cybr.global.activate(path.join(__dirname, 'short.tracktionedit'), true),
+// client.send([
+//   cybr.global.activate(path.join(__dirname, 'short.tracktionedit'), true),
   
-  fluid.audiotrack.select('default'),
-  fluid.midiclip.create('default', 0, 4, 
-    [{ type: 'midiNote', n: 64, startTime: 0, length: 0.25}],
-  ),
+//   fluid.audiotrack.select('default'),
+//   fluid.midiclip.create('default', 0, 4, 
+//     [{ type: 'midiNote', n: 64, startTime: 0, length: 0.25}],
+//   ),
 
-  fluid.audiotrack.select('default'),
-  fluid.pluginPodolski.select(),
+//   fluid.audiotrack.select('default'),
+//   fluid.pluginPodolski.select(),
 
-  fluid.pluginPodolski.setEnv1Attack(0.4),
-  fluid.pluginPodolski.setEnv1Decay(0.75),
-  fluid.pluginPodolski.setEnv1Sustain(0.95),
-  fluid.pluginPodolski.setEnv1Release(0.55),
+//   fluid.pluginPodolski.setEnv1Attack(0.4),
+//   fluid.pluginPodolski.setEnv1Decay(0.75),
+//   fluid.pluginPodolski.setEnv1Sustain(0.95),
+//   fluid.pluginPodolski.setEnv1Release(0.55),
 
-  fluid.pluginPodolski.setOsc1WaveWarp(1),
-  fluid.pluginPodolski.setVcf0Cutoff(0.55),
-  fluid.pluginPodolski.setVcf0Resonance(0.9),
-  fluid.pluginPodolski.setVcf0CutoffMod1(1),
-  fluid.pluginPodolski.setVcf0Modsource1(16/17),
+//   fluid.pluginPodolski.setOsc1WaveWarp(1),
+//   fluid.pluginPodolski.setVcf0Cutoff(0.9),
+//   fluid.pluginPodolski.setVcf0Resonance(0.9),
+//   fluid.pluginPodolski.setVcf0CutoffMod1(1),
+//   fluid.pluginPodolski.setVcf0Modsource1(16/17),
 
-  fluid.audiotrack.renderRegion(
-    path.join(
-      __dirname, 
-      '..',
-      'data', 
-      'podo_short_helm.wav',
-    ), 0, 4),
-]);
+//   fluid.audiotrack.renderRegion(
+//     path.join(
+//       __dirname, 
+//       '..',
+//       'data', 
+//       'podo_short_helm.wav',
+//     ), 0, 4),
+// ]);
