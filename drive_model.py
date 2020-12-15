@@ -189,5 +189,3 @@ for i_episode in range(num_episodes):
             print('Episode {}\tReward: {}\t State: {}'.format(i_episode, reward, state.tolist()))
 
 print('Complete')
-plt.ioff()
-plt.show()
