@@ -7,6 +7,7 @@ import time
 import skimage.measure
 import os
 from pydub import AudioSegment
+import time
 
 class FluidEnv:
 
@@ -48,6 +49,7 @@ class FluidEnv:
     return r
 
   def step(self, action):
+    start = time.time()
     temp = np.round(torch.clamp(self.current_state+action, 0, 1), 3)
     args = ' '.join(map(str, temp.tolist()))
 
@@ -60,7 +62,10 @@ class FluidEnv:
     except:
       time.sleep(2)
       x_l, sr = torchaudio.load('data/out_long.wav')  
-      x_s, sr = torchaudio.load('data/out_short.wav')  
+      x_s, sr = torchaudio.load('data/out_short.wav') 
+
+    end = time.time() 
+    print("step: ", end-start)
 
     r = self.getReward(x_s, x_l, sr)
 
